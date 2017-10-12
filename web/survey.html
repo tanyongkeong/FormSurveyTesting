@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+    </head>
+    <body>
+        <div>
+            
+            <h1><img src="images/logo.jpg" alt="logo"></h1>
+            <h1>Listener Survey</h1>
+                <p>Please answer the following questions so our radio station can better serve you, our listeners.</p>
+            <form role="form" action="surveyResult.jsp" name="surveyresults" id="surveyresults" data-toggle="validator">
+                <div>
+                    <h2>User Information</h2>
+                    <div class="form-group">
+                        <label for="name">Name: </label>
+                        <input type="text" id="name" name="name" placeholder="Abu Ahmad" pattern="[A-Za-z]{3,50}" >
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email: </label>
+                        <input type="email" id="email" placeholder="Email" data-error="Email address is invalid" name="email" >
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact Number: </label>
+                        <input type="text" id="phone" name="phone" placeholder="0197269628" pattern="^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" >
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <h2>Musical Preference</h2>
+                    <div class="checkbox">
+                        <input type="checkbox" name="check[]" value="easyListening" >Easy Listening
+                        <input type="checkbox" name="check[]" value="rockNRoll" >Rock n' Roll
+                        <input type="checkbox" name="check[]" value="jazz" >Jazz
+                        <input type="checkbox" name="check[]" value="classical" >Classical
+                        <input type="checkbox" name="check[]" value="folk" >Folk
+                        <input type="checkbox" name="check[]" value="heavyMetal" >Heavy Metal
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>Favorite Music Decade</h2>
+                    <select name="decade" >
+                      <option value=''>Select ...</option>
+                      <option value="Fifties">Fifties
+                      <option value="Sixties">Sixties
+                      <option value="Seventies">Seventies
+                      <option value="Eighties">Eighties
+                      <option value="Nineties">Nineties
+                      <option value="Tens">Tens
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <h2>Days of Week Listen to Radio</h2>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="day" value="monday" required>Monday
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="day" value="tuesday" >Tuesday
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="day" value="wednesday" >Wednesday
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="day" value="thursday" >Thursday
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="day" value="friday" >Friday
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="day" value="saturday" >Saturday
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="day" value="sunday" >Sunday
+                      </label>
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>I listen to WARNARadio</h2>
+                    <select name="behavior" size="4" id="list">
+                      <option value=''>Select ...</option>
+                      <option value="Every Day">Every Day
+                      <option value="One Day a Week">One Day a Week
+                      <option value="2 or 3 Days">2 or 3 Days
+                      <option value="4 or 5 Days">4 or 5 Days
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <h2>Prefer to Listen:</h2>
+                    <div class="checkbox">
+                      <label>
+                       <input type="checkbox" name="check1[]" value="atHome" >At home?
+                      </label>
+                      <label>
+                        <input type="checkbox" name="check1[]" value="inYourCar" >In Your Car?
+                      </label>
+                      <label>
+                        <input type="checkbox" name="check1[]" value="atWork" >At work?
+                      </label>
+                      
+                    </div>
+                </div>
+                
+                <div>
+                    <h2>Additional comments</h2>
+                    <textarea rows="4" cols="50" name="comment"></textarea>               
+                </div>
+                <input type="checkbox" name="check2" value="sunscribe" >Subscribe to newsletter?
+                <input type="submit" name="submitButton" value="Submit Survey" >
+            </form>
+        </div>
+        
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+        type="text/javascript"></script>
+
+        <!--include jQuery Validation Plugin-->
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/jquery.validate.min.js"
+        type="text/javascript"></script>
+
+        <!--Optional: include only if you are using the extra rules in additional-methods.js -->
+        <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.12.0/additional-methods.min.js"
+        type="text/javascript"></script>
+        <script type="text/javascript" src="js/formValidation.js"></script>
+
+    </body>
+</html>
+
